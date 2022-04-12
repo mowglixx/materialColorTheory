@@ -12,7 +12,7 @@
     
     --bg-calc: var(--theme-hue-val) + 180;
     
-    --bg: hsl(var(--bg-calc), 100%, 95%);
+    --bg: hsl(var(--bg-calc), 100%, 97%);
     --headers: hsl(var(--bg-calc), 20%, 3%);
     
     --surface: hsla(var(--theme-hue-val), 100%, 100%, 0.10);
@@ -28,13 +28,13 @@
     --primary-solid: hsla(var(--theme-hue-val), 100%, 60%, 1);
     --on-primary: hsl(var(--theme-hue-val), 100%, 60%);
     
-    --bg: hsl(var(--bg-calc), 100%, 0%);
+    --bg: hsl(var(--bg-calc), 100%, 3%);
     --headers: hsl(var(--bg-calc), 100%, 80%);
     
     --surface: hsla(var(--theme-hue-val), 100%, 100%, 0.10);
     --surface-solid: hsla(var(--theme-hue-val), 100%, 10%, 1);
     --surface-border: 0.0001em solid var(--primary);
-    --onsurface: hsl(var(--bg-calc), 50%, 90%);
+    --onsurface: hsl(var(--bg-calc), 50%, 97%);
 }
 
 /* wildcard */
@@ -49,7 +49,7 @@
     /* font reset and color */
     font-size: 1em;
     color: var(--onsurface);
-    background-color: none;
+    background: none;
 }
 
 /* elements */    
@@ -58,7 +58,11 @@ body {
     font-family: 'Open Sans', sans-serif;
     background-color: var(--bg);
     min-height: 100vh;
-    width: 100vw;
+    max-width: 100vw;
+}
+
+a:hover, button:hover{
+    cursor: pointer;
 }
 
 /* Typography */
@@ -68,12 +72,15 @@ h1, h2, h3, h4, h5 {
     font-family: 'Encode Sans', sans-serif;
     padding-bottom: var(--padding);
     color: var(--headers);
+    text-align: left;
+    padding-left: 1rem;
     
 }
 
 p{
-    font-size: 1.25em;
+    font-size: 1em;
     padding-bottom: var(--padding);
+    text-align: justify;
 }
 
 h1 {
@@ -99,7 +106,7 @@ h5 {
     
 }
 .lead{
-    font-size: 1.5em;
+    font-size: 1.25em;
 }
 
 a, a:active, a:visited, a:hover {
