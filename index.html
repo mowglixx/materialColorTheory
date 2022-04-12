@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- meta -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- end meta -->
+
+    <!-- title -->
+    <title>CSS Playground</title>
+    
+    <!-- remixicons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/main.css">
+    <style id="theme">
+        :root{
+            --theme-hue-val: 0;
+            --bg-calc: calc(var(--theme-hue-val) + 90);
+        }
+    </style>
+    <style id="debugging">
+           .container *:after{
+            position: absolute;
+            background-color: rgb(255,255,255,0.5);
+            color: black;
+            border-radius: 5px;
+            border: 2px solid black;
+            font-size: 12px;
+            top: 3em;
+            left: 3em;
+            padding: 1em;
+            text-decoration: none;
+            text-emphasis: none;
+            /* content: ' Classes Used: "'attr(class)'"'; */
+            display: none;
+        }
+        .container *:hover:after{
+            background-color: rgb(255,255,255,0.9);
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <!-- side nav -->
+    <nav id="nav" title="Facebook" class="dp1">
+        <a href="#" class="nav-link" title="Home"><i class="ri-home-line"></i></a>
+        <a href="#" class="nav-link" title="Messages"><i class="ri-message-line"></i></a>
+        <a href="#" class="nav-link" title="Notifications"><i class="ri-notification-line"></i></a>
+        <a href="#" class="nav-link" title="Account"><i class="ri-account-circle-line"></i></a>
+        <a href="#" class="nav-link" title="Settings"><i class="ri-settings-3-line"></i></a>
+        <a href="#" class="nav-link" title="Logout"><i class="ri-logout-box-line"></i></a>       
+        <a href="#" id="themeButton" class="nav-link" title="Change Theme"><i class="ri-pantone-line"></i></a>       
+        <a href="#" id="toggleDarkModeButton" class="nav-link" title="Toggle Dark mode"><i class="ri-moon-line"></i></a>       
+    </nav>
+    <!-- main container -->
+    <div class="main">
+        <div class="container surface">
+            <h1 class="header">This is a title header</h1>
+            <p>Welcome to the homepage</p>
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+        </div>
+        <div class="container surface">
+            <h2 class="header"></h2>
+            <p class="lead">A larger font for when those words need to be bigger</p>
+            <p>This is a paragraph</p>
+            <em>em</em>
+        </div>
+
+        <footer bg="#ff0066">
+            <p class="footer-text">Facetweetbook &copy; 2022</p>
+            <a href="#" class="footer-link">Home</a>
+            <a href="#" class="footer-link">About</a>
+            <a href="#" class="footer-link">Messages</a>
+            <a href="#" class="footer-link">Friends</a>
+            <a href="#" class="footer-link">Settings</a>
+        </footer>
+    </div>
+    <!-- Sticky header -->
+    <script>
+        changeThemeButton = document.getElementById('themeButton')
+        toggleDarkModeButton = document.getElementById('toggleDarkModeButton')
+        
+        themeStyle = document.getElementById('theme')
+        
+        let theme = 0
+        
+        const changeTheme = () => {
+
+            console.log('Theme Changed', theme)
+            if(theme < 360){
+                theme = theme+10
+            }
+            else{
+                theme = 0
+            }
+            if(theme >= 180) {
+                content = ':root{\n'
+                +' --theme-hue-val: '+theme+';\n'
+                +'--bg-calc: calc(var(--theme-hue-val) - 180);\n}'
+            }
+            else {
+                content = ':root{'
+                +' --theme-hue-val: '+theme+';\n'
+                +'--bg-calc: calc(var(--theme-hue-val) + 180);\n}'
+            }
+            
+            themeStyle.innerHTML = content
+        }
+        const toggleDarkMode = () => {
+
+            console.log('Dark Mode Toggled')
+            document.body.classList.toggle('dark')
+        }
+        
+        changeThemeButton.addEventListener('click', changeTheme)
+        toggleDarkModeButton.addEventListener('click', toggleDarkMode)
+    </script>
+</body>
+</html>

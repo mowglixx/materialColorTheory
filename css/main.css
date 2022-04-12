@@ -1,0 +1,215 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@200&family=Open+Sans:wght@600&display=swap');
+
+/* css variables */
+:root {
+    --theme-hue-val: 0;
+    
+    --primary: hsl(var(--theme-hue-val), 100%, 70%);
+    --on-primary: hsl(var(--theme-hue-val), 100%, 10%);
+    
+    --bg-calc: var(--theme-hue-val) + 180;
+    --bg: hsl(var(--theme-hue-val), 100%, 90%);
+    
+    --surface: hsl(var(--bg-calc), 100%, 90%);
+    --onsurface: hsl(var(--bg-calc), 50%, 15%);
+    
+    --attr-exp: attr(c-var);
+    --padding: 0.5em;
+    --wide-padding: 2em;
+}
+.dark {
+    --primary: hsl(var(--theme-hue-val), 100%, 10%);
+    --on-primary: hsl(var(--theme-hue-val), 100%, 70%);
+
+    --bg: hsl(var(--bg-calc), 100%, 10%);
+    
+    --surface: hsl(var(--bg-calc), 100%, 20%);
+    --onsurface: hsl(var(--bg-calc), 50%, 90%);
+}
+
+/* wildcard */
+* {
+    /* set the border to not effect box sizing */
+    box-sizing: border-box;
+    /* reset margin and padding for everything */
+    margin: 0;
+    padding: 0;
+    /* #elementswithoutborders */
+    border: none;
+    /* font reset and color */
+    font-size: 1em;
+    color: var(--onsurface);
+    background-color: none;
+}
+
+/* elements */    
+body {
+    display: flex;
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--bg);
+    min-height: 100vh;
+}
+
+/* Typography */
+
+h1, h2, h3, h4, h5 {
+    /* Overide for headers */
+    font-family: 'Encode Sans', sans-serif;
+    
+}
+
+h1 {
+    font-size: 3.5em;
+}
+
+h2 {
+    font-size: 2.5em;
+    
+}
+
+h3 {
+    font-size: 2em;
+    
+}
+
+h4 {
+    font-size: 1.5em;
+    
+}
+h5 {
+    font-size: 1.25em;
+    
+}
+.lead{
+    font-size: 1.25em;
+}
+
+a, a:active, a:visited, a:hover {
+    text-decoration: none;
+    color: var(--onsurface);
+}
+a:hover{
+    color: var(--surface);
+}
+
+hr {
+    border: 1px solid black;
+    background-color: rgb(0, 0, 0, 0);
+}
+
+/* nav */
+nav {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: -3em;
+    height: 100vh;
+    flex-direction: column;
+    background-color: var(--surface);
+    /* background-color: rgba(20,20,20,0.7); */
+    backdrop-filter: blur(50px);
+    padding: var(--padding);
+    border-right: 1px rgb(0, 0, 0,0.2) solid;
+    /* box-shadow: 0.5em 0 1em rgba(0, 0, 0, 0.3); */
+    transition: ease-in 0.2s;
+}
+nav:hover{
+    left: 0;
+}
+nav:before{
+    content: attr(title);
+    position: absolute;
+    left: -6em;
+    opacity: 0;
+    transition: all 0.3s;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2em;
+    color: var(--onsurface);
+    background-color: var(--surface);
+    padding: 1em;
+    border: 0.1em solid var(--onsurface);
+    z-index: -1;
+}
+nav:hover:before{
+    left: 4em;
+    opacity: 1;
+}
+
+nav a {
+    display: flex;
+    font-size: 2.5em;
+    background-color: var(--primary);
+    border-radius: 50%;
+    padding: calc(var(--padding)/4);
+    margin-bottom: calc(var(--padding)/2);
+    border: 0.1em solid var(--onsurface);
+    transition: filter 0.3s;
+}
+
+nav a:hover {
+    filter: brightness(3);
+    filter: blur();
+}
+
+nav a:hover:after {
+    position: absolute;
+    font-size: 14pt;
+    content: attr(title);
+    margin-left: 4em;
+    border-radius: 3px;
+    padding: calc(var(--padding)/2);
+    background-color: var(--surface);
+    color: var(--onsurface);
+    z-index: -10;
+    animation: none;
+}
+
+/* Classes */
+
+/* remix icons */
+.remix {
+    width: 64px;
+    height: 64px;
+    fill: var(--on-primary);
+}
+
+.brand-header {
+    background-color: var(--primary);
+    z-index: 20;
+    position: fixed;
+    top: 0;
+    left: 6em;
+    width: 100%;
+}
+
+.brand {
+    color: white;
+}
+
+.main{
+    padding: 6em;
+    padding-left: 8em;
+}
+
+.container {
+    padding: calc(var(--padding) * 3.333);
+    margin: calc(var(--padding) * 3);
+}
+
+.surface{
+    background-color: var(--surface);
+    border-radius: 0.5em;
+}
+
+.primary{
+    background-color: var(--primary);
+}
+
+.dp1{
+    box-shadow: 0em 0em 0.5em var(--);
+}
+
+* {
+    background-color: attr(bg);
+}
