@@ -27,7 +27,7 @@
     --primary-solid: hsla(var(--theme-hue-val), 100%, 60%, 1);
     --on-primary: hsl(var(--theme-hue-val), 100%, 60%);
     
-    --bg: hsl(var(--bg-calc), 100%, 10%);
+    --bg: hsl(var(--bg-calc), 100%, 3%);
     
     --surface: hsla(var(--bg-calc), 100%, 100%, 0.10);
     --surface-solid: hsla(var(--bg-calc), 100%, 10%, 1);
@@ -124,6 +124,7 @@ nav {
     /* background-color: rgba(20,20,20,0.7); */
     backdrop-filter: blur(50px);
     padding: var(--padding);
+    padding-top: calc(var(--padding) * 4);
     border-right: 1px rgb(0, 0, 0,0.2) solid;
     /* box-shadow: 0.5em 0 1em rgba(0, 0, 0, 0.3); */
     transition: ease-in 0.2s;
@@ -163,6 +164,7 @@ nav a {
     background-color: var(--surface);
     border-radius: 50%;
     padding: calc(var(--padding)/4);
+    padding-top: calc(var(--padding)/4);
     margin-bottom: calc(var(--padding)/2);
     border: 0.1em solid var(--onsurface);
     transition: all 0.3s;
@@ -213,7 +215,7 @@ nav a:hover:after {
 
 .main{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding-left: 10em;
 }
 
@@ -221,7 +223,7 @@ nav a:hover:after {
     display: flex;
     flex-direction: column;
     padding: var(--wide-padding);
-    margin-bottom: calc(var(--wide-padding));
+    margin-top: calc(var(--wide-padding));
     background-color: var(--primary);
     border: var(--surface-border);
     border-radius: var(--wide-padding);
