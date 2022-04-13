@@ -12,7 +12,7 @@
     
     --bg-calc: calc(var(--theme-hue-val) + 180);
     
-    --bg: hsl(var(--bg-calc), 10%, 90%);
+    --bg: #eee;
     --headers: hsl(var(--bg-calc), 100%, 10%);
     
     --card-bg: hsl(var(--bg-calc), 10%, 90%);
@@ -39,9 +39,9 @@
     --primary-solid: hsl(var(--theme-hue-val), 100%, 70%);
     --on-primary: hsl(var(--theme-hue-val), 100%, 10%);
     
-    --bg: hsl(var(--bg-calc), 90%, 0%);
+    --bg: #111;
     --card-bg: hsl(var(--bg-calc), 90%, 0%);
-    --headers: hsl(var(--bg-calc), 100%, 80%);
+    --headers: hsl(var(--bg-calc), 100%, 70%);
     
     --card-bg: hsl(var(--bg-calc), 10%, 90%);
     --on-card: hsl(var(--bg-calc), 10%, 5%);
@@ -124,6 +124,11 @@ h5 {
 .lead{
     font-size: calc(var(--font-size) * 1.15);
 }
+strong {
+    text-shadow: 0 0 0.001em var(--on-surface);
+    font-size: var(--font-size);
+}
+
 
 a, a:active, a:visited, a:hover {
     text-decoration: underline;
@@ -144,7 +149,7 @@ nav {
     height: 100vh;
     /* width: 15em; */
     flex-direction: column;
-    background-color: var(--primary);
+    background-color: var(--primary-solid);
     /* background-color: rgba(20,20,20,0.7); */
     backdrop-filter: blur(50px);
     padding: var(--margin);
@@ -183,37 +188,43 @@ nav:hover:before{
 
 nav a {
     display: flex;
+    box-shadow: var(--surface-shadow);
     font-size: calc(var(--margin) * 2);
-    background-color: var(--bg);
-    border-radius: 50%;
+    background-color: var(--surface-solid);
+    margin: var(--y-base) 0;
+    border-radius: 35%;
     padding: calc(var(--margin) / 4);
     /* padding-top: calc(var(--margin) / 4); */
-    border: calc(var(--margin) / 2) solid var(--primary-solid);
+    /* border: calc(var(--margin) / 3) solid var(--bg); */
     transition: all 0.3s;
     text-decoration: none;
 }
 
 nav a:hover {
     filter: brightness(1.1);
+    background-color: var(--surface);
     text-decoration: none;
 }
 
 nav a:hover:after {
+    display: flex;
     position: absolute;
     font-size: var(--font-size);
-    content: attr(title);
+    content: attr(title) '\a' attr(alt);
+    white-space: pre;
     margin-left: 4em;
     min-width: 10em;
     /* background-color: var(--surface); */
     color: var(--on-surface);
     z-index: -10;
-    padding: var(--wide-margin);
+    padding: var(--margin);
     /* margin: calc(var(--margin) * 3); */
     background-color: var(--bg);
     border-radius: var(--wide-margin);
     /* height: fit-content; */
     box-shadow: var(--surface-shadow);
 }
+
 nav>a>i{
     font-size: calc(var(--font-size) * 2);
 }
@@ -248,7 +259,7 @@ nav>a>i{
 .main>*{
     max-width: 100%;
     min-width: 550px;
-    margin: 1vw;
+    margin: var(--margin);
 }
 
 .surface{
@@ -258,7 +269,7 @@ nav>a>i{
     margin: calc(var(--margin)) 0;
     background-color: var(--surface);
     /* border: var(--surface-border); */
-    border-radius: var(--wide-margin);
+    border-radius: var(--margin);
     height: fit-content;
     box-shadow: var(--surface-shadow);
     /* min-width: 50%; */
@@ -276,51 +287,68 @@ nav>a>i{
     transition: all 0.3s;
     margin: var(--margin) 0;
 }
-.card > * {
-    padding: var(--margin);
-}
+
 .card-image{
     display: flex;
+    padding: 0;
     border-radius: 50%;
-    max-height: 150px;
+    height: 5em;
     max-width: 150px;
     box-shadow: var(--surface-shadow);
 }
 .card-body{
     display: flex;
     flex-direction: column;
+    width: 100%;
+    padding: var(--margin);
 }
 .card-header{
     display: inline;
+    padding: var(--margin);
     color: var(--headers);
+}
+.card-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.margin-all{
+    margin: var(--margin);
 }
 
 /* Buttons */
-.primary, .secondary{
+.button{
+    display: flex;
     font-size: 1em;
     font-weight: bold;
     padding: calc(var(--margin) * 2) calc(var(--margin) * 4);
-    margin: var(--margin);
     border-radius: var(--wide-margin);
     box-shadow: var(--surface-shadow);
 }
-.primary:hover{
-    filter: brightness(0.8);
-}
 
-.secondary:hover{
+button.secondary:hover, button.primary:hover, .button.secondary:hover, .button.primary:hover{
     filter: brightness(1.1);
 }
-.primary{
-    background-color: var(--surface);
-    color: var(--on-surface);
-    /* border: 0.15em solid var(--on-surface); */
+
+.primary *{
+    color: var(--on-primary);
 }
-.secondary{
+.secondary *{
+    color: var(--on-surface);
+}
+.primary{
     background-color: var(--primary-solid);
     color: var(--on-primary);
     /* border: 0.15em solid var(--on-primary); */
 }
+.secondary{
+    background-color: var(--surface);
+    color: var(--on-surface);
+    /* border: 0.15em solid var(--on-surface); */
+}
+
+
 .hidden{
     height: 0;
     width: 100%;

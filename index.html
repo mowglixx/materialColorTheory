@@ -46,116 +46,164 @@
     </style>
 </head>
 
-<body class="dark">
+<body>
     <!-- side nav -->
     <nav id="nav" title="Navbar Css Fun">
-        <a id="themeButton" class="nav-link" title="Change Theme">
+        <a id="themeButton" class="nav-link" title="Change Theme" alt="Click to change the theme">
             <i class="ri-pantone-line"></i>
         </a>
-        <a id="toggleDarkModeButton" class="nav-link" title="Toggle Dark mode">
+        <a id="toggleDarkModeButton" class="nav-link" title="Toggle Dark mode" alt="Turn out the lights!">
             <i class="ri-moon-line"></i>
         </a>
     </nav>
     <!-- main container -->
     <div class="main flex-row">
         <div id="left" class="flex-col">
-            
             <div class="surface">
                 <h1>Section 1</h2>
                     <div class="surface">
                         <h2>Welcome</h2>
                         <p class="lead">This is an experimental sandbox for working on my CSS skills</p>
                     </div>
-                </div>
-                <div class="surface">
-                    <h1>Heading 1</h1>
-                    <h2>Heading 2</h2>
-                    <h3>Heading 3</h3>
-                    <h4>Heading 4</h4>
-                    <h5>Heading 5</h5>
-                    <p class="lead">The quick brown fox jumped over the lay dog.</p>
-                    <p><strong>The quick brown fox jumped over the lay dog.</strong></p>
-                    <p><em>The quick brown fox jumped over the lay dog.</em></p>
-                    <p><u>The quick brown fox jumped over the lay dog.</u></p>
-                    <p>
-                        Lorem ipsum dolor <em>sit</em> amet consectetur adipisicing elit. 
-                        Officiis provident porro sequi <strong>sint</strong> perferendis, placeat 
-                        ratione, cumque consectetur earum, labore temporibus vero 
-                        sapiente saepe. <a href="#">Maxime debitis</a> porro deserunt repellendus 
-                        nisi.
-                    </p>
-                </div>
             </div>
-            <div id="right" class="flex-col">
-                <div class="surface">
-                <h2>Cards</h2>
-                <button id="toggleCardButton" class="secondary">Toggle Top Card</button>
-                <div id="closableCard" class="surface card">
-                    <img src="https://randomuser.me/api/portraits/men/83.jpg" alt="" class="card-image">
-                    <div class="card-body">
-                        <h2 class="card-header">This card is closable</h2>
-                        <p>If you click on the button below it will add the .hidden class to this card</p>
-                        <div class="card-footer">
-                            <button id="closeCard" class="primary">Close Card</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="https://randomuser.me/api/portraits/men/83.jpg" alt="" class="card-image">
-                    <div class="card-body">
-                        <h2 class="card-header">Card header</h2>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro neque deserunt at. Incidunt velit nesciunt, repudiandae porro pariatur inventore maxime omnis qui quis! Ducimus qui distinctio iste quas vitae earum, fuga aspernatur eveniet laudantium perspiciatis, mollitia, obcaecati fugit? Amet suscipit quas nobis sunt, accusantium earum!</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro neque deserunt at. Incidunt velit nesciunt, repudiandae porro pariatur inventore maxime omnis qui quis! Ducimus qui distinctio iste quas vitae earum, fuga aspernatur eveniet laudantium perspiciatis, mollitia, obcaecati fugit? Amet suscipit quas nobis sunt, accusantium earum!</p>
-                        <div class="card-footer">
-                            <button class="primary">Primary</button>
-                            <button class="secondary">Secondary</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-                <div class="surface">
-                    <h2>An extra .surface section</h2>
-                    <p>No content yet</p>
-                </div>
-                
-                <footer class="surface">
-                    <p class="footer-text">Nav Bar Fun &copy; 2022</p>
-                    <a href="#" class="footer-link">Github</a>
-                </footer>
-            </div>
+            <div class="surface">
+                <h1>Heading 1</h1>
+                <h2>Heading 2</h2>
+                <h3>Heading 3</h3>
+                <h4>Heading 4</h4>
+                <h5>Heading 5</h5>
+                <p class="lead">.lead: The quick brown fox jumped over the lay dog.</p>
+                <p>strong: <strong>The quick brown fox jumped over the lay dog.</strong></p>
+                <p>em: <em>The quick brown fox jumped over the lay dog.</em></p>
+                <p>u: <u>The quick brown fox jumped over the lay dog.</u></p>
+                <p>
+                    Lorem ipsum dolor <em>sit</em> amet consectetur adipisicing elit.
+                    Officiis provident porro sequi <strong>sint</strong> perferendis, placeat
+                    ratione, cumque consectetur earum, labore temporibus vero
+                    sapiente saepe. <a href="#">Maxime debitis</a> porro deserunt repellendus
+                    nisi.
+                </p>
             </div>
         </div>
-        <!-- Sticky header -->
+        <div id="right" class="flex-col">
+            <div class="surface">
+                <h2>Cards</h2>
+                <button id="toggleCardButton" class="button margin-all primary">Toggle Top Card</button>
+
+                    <div id="closableCard" class="card">
+                        <img src="https://randomuser.me/api/portraits/men/27.jpg" alt="" class="card-image">
+                        <div class="card-body">
+                            <h2 class="card-header">Vanilla Card</h2>
+                            <p>If you click on the button below it will add the .hidden class to this card</p>
+                            <div class="card-footer">
+                                <button id="closeCard" class="button margin-all primary">Close Card</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://randomuser.me/api/portraits/women/37.jpg" alt="" class="card-image">
+                        <div class="card-body">
+                            <h2 class="card-header">Vanilla Card</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro neque deserunt at.
+                                Incidunt velit nesciunt, repudiandae porro pariatur inventore maxime omnis qui quis!
+                                Ducimus qui distinctio iste quas vitae earum, fuga aspernatur eveniet laudantium
+                                perspiciatis, mollitia, obcaecati fugit? Amet suscipit quas nobis sunt, accusantium
+                                earum!</p>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro neque deserunt at.
+                                Incidunt velit nesciunt, repudiandae porro pariatur inventore maxime omnis qui quis!
+                                Ducimus qui distinctio iste quas vitae earum, fuga aspernatur eveniet laudantium
+                                perspiciatis, mollitia, obcaecati fugit? Amet suscipit quas nobis sunt, accusantium
+                                earum!</p>
+                            <div class="card-footer">
+                                <button class="button margin-all primary">Primary</button>
+                                <button class="button margin-all secondary">Secondary</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card primary">
+                        <img src="https://randomuser.me/api/portraits/women/37.jpg" alt="" class="card-image">
+                        <div class="card-body">
+                            <h2 class="card-header">Primary Card</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro neque deserunt at.
+                                Incidunt velit nesciunt, repudiandae porro pariatur inventore maxime omnis qui quis!
+                                Ducimus qui distinctio iste quas vitae earum, fuga aspernatur eveniet laudantium
+                                perspiciatis, mollitia, obcaecati fugit? Amet suscipit quas nobis sunt, accusantium
+                                earum!</p>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro neque deserunt at.
+                                Incidunt velit nesciunt, repudiandae porro pariatur inventore maxime omnis qui quis!
+                                Ducimus qui distinctio iste quas vitae earum, fuga aspernatur eveniet laudantium
+                                perspiciatis, mollitia, obcaecati fugit? Amet suscipit quas nobis sunt, accusantium
+                                earum!</p>
+                            <div class="card-footer">
+                                <button class="button margin-all secondary">Secondary</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card secondary">
+                        <img src="https://randomuser.me/api/portraits/men/28.jpg" alt="" class="card-image">
+                        <div class="card-body">
+                            <h2 class="card-header">Secondary Card</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro neque deserunt at.
+                                Incidunt velit nesciunt, repudiandae porro pariatur inventore maxime omnis qui quis!
+                                Ducimus qui distinctio iste quas vitae earum, fuga aspernatur eveniet laudantium
+                                perspiciatis, mollitia, obcaecati fugit? Amet suscipit quas nobis sunt, accusantium
+                                earum!</p>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro neque deserunt at.
+                                Incidunt velit nesciunt, repudiandae porro pariatur inventore maxime omnis qui quis!
+                                Ducimus qui distinctio iste quas vitae earum, fuga aspernatur eveniet laudantium
+                                perspiciatis, mollitia, obcaecati fugit? Amet suscipit quas nobis sunt, accusantium
+                                earum!</p>
+                            <div class="card-footer">
+                                <button class="button margin-all primary">Primary</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+            </div>
+            <div class="surface">
+                <h2>An extra .surface section</h2>
+                <p>No content yet</p>
+            </div>
+
+            <footer class="surface">
+                <p class="footer-text">Nav Bar Fun &copy; 2022</p>
+                <a href="#" class="footer-link">Github</a>
+            </footer>
+        </div>
+    </div>
+    </div>
+    <!-- Sticky header -->
     <script>
         changeThemeButton = document.getElementById('themeButton')
         toggleDarkModeButton = document.getElementById('toggleDarkModeButton')
         closeCardButton = document.getElementById('closeCard')
         toggleCardButton = document.getElementById('toggleCardButton')
-        
+
         themeStyle = document.getElementById('theme')
-        
+
         let theme = 0
-        
+
         const changeTheme = () => {
-            
+
             console.log('Theme Changed', theme)
             if (theme < 360) {
-                theme = theme + 10
+                theme = theme + 3
             }
             else {
                 theme = 0
             }
             if (theme >= 180) {
                 content = ':root{\n'
-                + ' --theme-hue-val: ' + theme + ';\n'
-                + '--bg-calc: calc(var(--theme-hue-val) - 180);\n}'
+                    + ' --theme-hue-val: ' + theme + ';\n'
+                    + '--bg-calc: calc(var(--theme-hue-val) - 180);\n}'
             }
             else {
                 content = ':root{'
-                + ' --theme-hue-val: ' + theme + ';\n'
-                + '--bg-calc: calc(var(--theme-hue-val) + 180);\n}'
+                    + ' --theme-hue-val: ' + theme + ';\n'
+                    + '--bg-calc: calc(var(--theme-hue-val) + 180);\n}'
             }
-            
+
             themeStyle.innerHTML = content
         }
         const toggleDarkMode = () => {
@@ -169,12 +217,12 @@
             console.log('Card Toggled')
             closableCard.classList.toggle('hidden')
         }
-        
+
         toggleCardButton.addEventListener('click', closeCard)
         closeCardButton.addEventListener('click', closeCard)
         changeThemeButton.addEventListener('click', changeTheme)
         toggleDarkModeButton.addEventListener('click', toggleDarkMode)
-        </script>
+    </script>
 </body>
 
 </html>
