@@ -323,6 +323,8 @@ nav a:hover:after {
     transition: all 0.1s;
 }
 .hidden>img{
+    /* fixes gross animation 
+    when hiding parent from child */
     opacity: 0;
 }
 
