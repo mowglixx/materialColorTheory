@@ -49,86 +49,71 @@
 <body>
     <!-- side nav -->
     <nav id="nav" title="Navbar Css Fun">
-        <a id="themeButton" class="nav-link" title="Change Theme"><i class="ri-pantone-line"></i></a>
-        <a id="toggleDarkModeButton" class="nav-link" title="Toggle Dark mode"><i class="ri-moon-line"></i></a>
+        <a id="themeButton" class="nav-link" title="Change Theme">
+            <i class="ri-pantone-line"></i>
+        </a>
+        <a id="toggleDarkModeButton" class="nav-link" title="Toggle Dark mode">
+            <i class="ri-moon-line"></i>
+        </a>
     </nav>
     <!-- main container -->
     <div class="main">
-        <div class="surface container">
+        <div class="surface">
             <h1>Section 1</h2>
                 <div class="surface">
                     <h2>Welcome</h2>
                     <p class="lead">This is an experimental sandbox for working on my CSS skills</p>
-
                 </div>
         </div>
-        <div class="surface container">
-            <h1>Example Content</h2>
-                <div class="surface container">
-                    <h2>Typograhy</h2>
-                    <!-- <h1>Heading 1</h1>
-                    <h2>Heading 2</h2> -->
+        <div class="surface">
+                    <h1>Heading 1</h1>
+                    <h2>Heading 2</h2>
                     <h3>Heading 3</h3>
                     <h4>Heading 4</h4>
                     <h5>Heading 5</h5>
                     <p class="lead">This is a large paragraph</p>
-                    <p>This is a normal paragraph</p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                        Provident dolor omnis vel eligendi vero enim, dolore
-                        quisquam animi aut asperiores corporis voluptatibus rerum,
-                        inventore harum cum laborum reiciendis labore ad nemo deserunt.
-                        Vero suscipit repellat quae dicta esse expedita, soluta quo
-                        laborum obcaecati, eum facere?
+                    <p>
+                        Lorem ipsum dolor <em>sit</em> amet consectetur adipisicing elit. 
+                        Officiis provident porro sequi <strong>sint</strong> perferendis, placeat 
+                        ratione, cumque consectetur earum, labore temporibus vero 
+                        sapiente saepe. <a href="#">Maxime debitis</a> porro deserunt repellendus 
+                        nisi.
                     </p>
-                    <p>Accusantium ipsum, rerum delectus eum labore inventore nihil,
-                        aliquid soluta aperiam repellat quod quis, vitae esse ipsam
-                        earum pariatur voluptate dignissimos nemo dolores excepturi
-                        odit ad alias explicabo. Eaque ut vitae minima illo aperiam
-                        exercitationem, possimus maxime sed, amet libero voluptatibus
-                        corporis facilis id suscipit?
-                    </p>
-                    <p>Id dolore vitae, eius expedita temporibus itaque labore a
-                        facilis tenetur magni exercitationem ipsum saepe, maxime ab
-                        repellendus accusantium, corporis sed. Culpa autem nobis eum
-                        consequuntur nihil laudantium porro dignissimos praesentium,
-                        odit architecto tenetur, enim quo magni sed quisquam possimus
-                        similique? Est inventore illo ipsum?
-                    </p>
-                    <em>em</em>
-                    <strong>Strong<strong>
                 </div>
-                <div class="surface ">
+                <div class="surface">
                     <h2>Cards</h2>
-                    <div class="card">
-                        <img class="card-bg-image" src="https://randomuser.me/portraits/men/58.jpg" alt="">
-                        <p class="card-bg-image-header"></p>
+                    <button id="toggleCardButton" class="secondary">Toggle Top Card</button>
+                    <div id="closableCard" class="card">
+                        <img src="https://randomuser.me/api/portraits/men/83.jpg" alt="" class="card-image">
                         <div class="card-body">
-                            <button class="btn btn-primary">Primary</button>
-                            <button class="btn btn-secondary">Secondary</button>
+                            <h2 class="card-header">This card is closable</h2>
+                            <p>If you click on the button below</p>
+                            <div class="card-footer">
+                                <button id="closeCard" class="primary">Close Card</button>
+                            </div>
                         </div>
-                        <div class="card-footer"></div>
+                    </div>
+                    <div class="card">
+                        <img src="https://randomuser.me/api/portraits/men/83.jpg" alt="" class="card-image">
+                        <div class="card-body">
+                            <h2 class="card-header">Card header</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro neque deserunt at. Incidunt velit nesciunt, repudiandae porro pariatur inventore maxime omnis qui quis! Ducimus qui distinctio iste quas vitae earum, fuga aspernatur eveniet laudantium perspiciatis, mollitia, obcaecati fugit? Amet suscipit quas nobis sunt, accusantium earum!</p>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro neque deserunt at. Incidunt velit nesciunt, repudiandae porro pariatur inventore maxime omnis qui quis! Ducimus qui distinctio iste quas vitae earum, fuga aspernatur eveniet laudantium perspiciatis, mollitia, obcaecati fugit? Amet suscipit quas nobis sunt, accusantium earum!</p>
+                            <div class="card-footer">
+                                <button class="primary">Primary</button>
+                                <button class="secondary">Secondary</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="surface ">
-                    <h2>Welcome</h2>
-                    <p class="lead">This is an experimental sandbox for working on my CSS skills</p>
-                    <h1>Heading 1</h1>
-                    <h2>Heading 1</h2>
-                    <h3>Heading 1</h3>
-                    <h4>Heading 1</h4>
-                    <h5>Heading 1</h5>
-                    <p class="lead">This is a large paragraph</p>
-                    <p>This is a paragraph</p>
-                    <em>em</em>
+                <div class="surface">
+                    <h2>An extra .surface section</h2>
+                    <p>No content yet</p>
                 </div>
 
                 <footer class="surface">
-                    <p class="footer-text">Facetweetbook &copy; 2022</p>
-                    <a href="#" class="footer-link">Home</a>
-                    <a href="#" class="footer-link">About</a>
-                    <a href="#" class="footer-link">Messages</a>
-                    <a href="#" class="footer-link">Friends</a>
-                    <a href="#" class="footer-link">Settings</a>
+                    <p class="footer-text">Nav Bar Fun &copy; 2022</p>
+                    <a href="#" class="footer-link">Github</a>
                 </footer>
         </div>
     </div>
@@ -136,13 +121,15 @@
     <script>
         changeThemeButton = document.getElementById('themeButton')
         toggleDarkModeButton = document.getElementById('toggleDarkModeButton')
-
+        closeCardButton = document.getElementById('closeCard')
+        toggleCardButton = document.getElementById('toggleCardButton')
+        
         themeStyle = document.getElementById('theme')
-
+        
         let theme = 0
-
+        
         const changeTheme = () => {
-
+            
             console.log('Theme Changed', theme)
             if (theme < 360) {
                 theme = theme + 10
@@ -152,15 +139,15 @@
             }
             if (theme >= 180) {
                 content = ':root{\n'
-                    + ' --theme-hue-val: ' + theme + ';\n'
-                    + '--bg-calc: calc(var(--theme-hue-val) - 180);\n}'
+                + ' --theme-hue-val: ' + theme + ';\n'
+                + '--bg-calc: calc(var(--theme-hue-val) - 180);\n}'
             }
             else {
                 content = ':root{'
-                    + ' --theme-hue-val: ' + theme + ';\n'
-                    + '--bg-calc: calc(var(--theme-hue-val) + 180);\n}'
+                + ' --theme-hue-val: ' + theme + ';\n'
+                + '--bg-calc: calc(var(--theme-hue-val) + 180);\n}'
             }
-
+            
             themeStyle.innerHTML = content
         }
         const toggleDarkMode = () => {
@@ -168,10 +155,18 @@
             console.log('Dark Mode Toggled')
             document.body.classList.toggle('dark')
         }
+        const closeCard = () => {
+            closableCard = document.getElementById('closableCard')
 
+            console.log('Card Toggled')
+            closableCard.classList.toggle('hidden')
+        }
+        
+        toggleCardButton.addEventListener('click', closeCard)
+        closeCardButton.addEventListener('click', closeCard)
         changeThemeButton.addEventListener('click', changeTheme)
         toggleDarkModeButton.addEventListener('click', toggleDarkMode)
-    </script>
+        </script>
 </body>
 
 </html>
