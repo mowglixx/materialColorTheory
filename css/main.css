@@ -323,10 +323,12 @@ nav>a>i{
     display: flex;
     font-size: 1em;
     font-weight: bold;
-    padding: calc(var(--margin) * 2) calc(var(--margin) * 4);
+    padding: calc(var(--margin) * 1.2) calc(var(--margin) * 2);
     border-radius: var(--wide-margin);
     box-shadow: var(--surface-shadow);
     transition: box-shadow 0.2s;
+    justify-content: center;
+    max-width: 100%;
 }
 
 .button:hover{
@@ -405,7 +407,6 @@ nav>a>i{
 .button-group>.button{
     box-shadow: none;
     border-radius: 0;
-    padding: calc(var(--margin) * 1.5);
     margin:0;
     z-index: 10;
 }
