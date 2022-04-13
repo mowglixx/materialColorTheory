@@ -23,7 +23,7 @@
     --padding: 0.5em;
     --font-size: calc(var(--padding) * 2);
     --wide-padding: calc(var(--padding) * 4);
-    --shadow: 0em 0em 0.5em var(--on-surface);
+    --shadow: 0em 0em 0.5em hsla(0, 0%, 0%, 0.25);
 }
 .dark {
     --primary: hsl(var(--theme-hue-val), 100%, 70%, 0.25);
@@ -72,15 +72,15 @@ a:hover, button:hover{
 h1, h2, h3, h4, h5 {
     /* Overide for headers */
     font-family: 'Encode Sans', sans-serif;
-    padding-bottom: var(--padding);
+    padding: var(--padding) 1rem;
+    /* padding-bottom: var(--padding); */
     color: var(--headers);
     text-align: left;
-    padding-left: 1rem;
     
 }
 
 p{
-    padding-bottom: var(--padding);
+    padding: var(--padding) 1rem;
     text-align: justify;
 }
 
@@ -155,7 +155,7 @@ nav:before{
     z-index: -1;
     padding: var(--padding);
     /* margin: calc(var(--padding) * 3); */
-    background-color: var(--surface-solid);
+    background-color: var(--bg);
     border-radius: var(--padding);
     /* height: fit-content; */
     box-shadow: var(--shadow);
@@ -272,10 +272,9 @@ nav a:hover:after {
 .card-image{
     display: flex;
     border-radius: 50%;
-    aspect-ratio: 1/1;
-    max-width: 50px;
-    max-height: 50px;
-    min-width: 50px;
+    max-height: 150px;
+    max-width: 150px;
+    box-shadow: var(--shadow);
 }
 .card-body{
     display: flex;
