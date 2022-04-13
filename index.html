@@ -57,15 +57,17 @@
         </a>
     </nav>
     <!-- main container -->
-    <div class="main">
-        <div class="surface">
-            <h1>Section 1</h2>
-                <div class="surface">
-                    <h2>Welcome</h2>
-                    <p class="lead">This is an experimental sandbox for working on my CSS skills</p>
+    <div class="main flex-row">
+        <div id="left" class="flex-col">
+            
+            <div class="surface">
+                <h1>Section 1</h2>
+                    <div class="surface">
+                        <h2>Welcome</h2>
+                        <p class="lead">This is an experimental sandbox for working on my CSS skills</p>
+                    </div>
                 </div>
-        </div>
-        <div class="surface">
+                <div class="surface">
                     <h1>Heading 1</h1>
                     <h2>Heading 2</h2>
                     <h3>Heading 3</h3>
@@ -80,44 +82,47 @@
                         nisi.
                     </p>
                 </div>
+            </div>
+            <div id="right" class="flex-col">
                 <div class="surface">
-                    <h2>Cards</h2>
-                    <button id="toggleCardButton" class="secondary">Toggle Top Card</button>
-                    <div id="closableCard" class="card">
-                        <img src="https://randomuser.me/api/portraits/men/83.jpg" alt="" class="card-image">
-                        <div class="card-body">
-                            <h2 class="card-header">This card is closable</h2>
-                            <p>If you click on the button below</p>
-                            <div class="card-footer">
-                                <button id="closeCard" class="primary">Close Card</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="https://randomuser.me/api/portraits/men/83.jpg" alt="" class="card-image">
-                        <div class="card-body">
-                            <h2 class="card-header">Card header</h2>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro neque deserunt at. Incidunt velit nesciunt, repudiandae porro pariatur inventore maxime omnis qui quis! Ducimus qui distinctio iste quas vitae earum, fuga aspernatur eveniet laudantium perspiciatis, mollitia, obcaecati fugit? Amet suscipit quas nobis sunt, accusantium earum!</p>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro neque deserunt at. Incidunt velit nesciunt, repudiandae porro pariatur inventore maxime omnis qui quis! Ducimus qui distinctio iste quas vitae earum, fuga aspernatur eveniet laudantium perspiciatis, mollitia, obcaecati fugit? Amet suscipit quas nobis sunt, accusantium earum!</p>
-                            <div class="card-footer">
-                                <button class="primary">Primary</button>
-                                <button class="secondary">Secondary</button>
-                            </div>
+                <h2>Cards</h2>
+                <button id="toggleCardButton" class="secondary">Toggle Top Card</button>
+                <div id="closableCard" class="card">
+                    <img src="https://randomuser.me/api/portraits/men/83.jpg" alt="" class="card-image">
+                    <div class="card-body">
+                        <h2 class="card-header">This card is closable</h2>
+                        <p>If you click on the button below</p>
+                        <div class="card-footer">
+                            <button id="closeCard" class="primary">Close Card</button>
                         </div>
                     </div>
                 </div>
+                <div class="card">
+                    <img src="https://randomuser.me/api/portraits/men/83.jpg" alt="" class="card-image">
+                    <div class="card-body">
+                        <h2 class="card-header">Card header</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro neque deserunt at. Incidunt velit nesciunt, repudiandae porro pariatur inventore maxime omnis qui quis! Ducimus qui distinctio iste quas vitae earum, fuga aspernatur eveniet laudantium perspiciatis, mollitia, obcaecati fugit? Amet suscipit quas nobis sunt, accusantium earum!</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro neque deserunt at. Incidunt velit nesciunt, repudiandae porro pariatur inventore maxime omnis qui quis! Ducimus qui distinctio iste quas vitae earum, fuga aspernatur eveniet laudantium perspiciatis, mollitia, obcaecati fugit? Amet suscipit quas nobis sunt, accusantium earum!</p>
+                        <div class="card-footer">
+                            <button class="primary">Primary</button>
+                            <button class="secondary">Secondary</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
                 <div class="surface">
                     <h2>An extra .surface section</h2>
                     <p>No content yet</p>
                 </div>
-
+                
                 <footer class="surface">
                     <p class="footer-text">Nav Bar Fun &copy; 2022</p>
                     <a href="#" class="footer-link">Github</a>
                 </footer>
+            </div>
+            </div>
         </div>
-    </div>
-    <!-- Sticky header -->
+        <!-- Sticky header -->
     <script>
         changeThemeButton = document.getElementById('themeButton')
         toggleDarkModeButton = document.getElementById('toggleDarkModeButton')

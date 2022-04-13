@@ -318,3 +318,19 @@ nav a:hover:after {
     opacity: 0;
     filter: scale(50);
 }
+
+.flex-col, .flex-row{
+    display: flex;
+}
+.flex-col{
+    flex-direction: column;
+}
+.flex-row{
+    flex-direction: row;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+.flex-nowrap{
+    flex-wrap: nowrap;
+}
