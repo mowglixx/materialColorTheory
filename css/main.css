@@ -13,10 +13,11 @@
     --bg-calc: calc(var(--theme-hue-val) + 180);
     
     --bg: #eee;
-    --headers: hsl(var(--bg-calc), 100%, 10%);
+    --headers: hsl(var(--bg-calc), 100%, 25%);
     
     --card-bg: hsl(var(--bg-calc), 10%, 90%);
     --on-card: hsl(var(--bg-calc), 10%, 5%);
+    --example_hsl: hsla(180, 100%, 70%, 0.75);
     
     
     /* measurement */
