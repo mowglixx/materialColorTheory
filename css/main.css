@@ -17,6 +17,7 @@
     
     --card-bg: hsl(var(--bg-calc), 10%, 90%);
     --on-card: hsl(var(--bg-calc), 10%, 5%);
+    --example_hsl: hsla(180, 100%, 70%, 0.75);
     
     
     /* measurement */

@@ -22,7 +22,7 @@
             --bg-calc: calc(var(--theme-hue-val) + 90);
         }
     </style>
-    <style id="debugging">
+    <!-- <style id="debugging">
         .container *:after {
             position: absolute;
             background-color: rgb(255, 255, 255, 0.5);
@@ -43,7 +43,7 @@
             background-color: rgb(255, 255, 255, 0.9);
             display: inline-block;
         }
-    </style>
+    </style> -->
 </head>
 
 <body>
@@ -51,6 +51,9 @@
     <nav id="nav" title="Navbar Css Fun">
         <a id="themeButton" class="nav-link" title="Change Theme" alt="Click to change the theme">
             <i class="ri-pantone-line"></i>
+        </a>
+        <a id="randomThemeButton" class="nav-link" title="Random Theme" alt="Click to change the theme randomly">
+            <i class="ri-refresh-fill"></i>
         </a>
         <a id="toggleDarkModeButton" class="nav-link" title="Toggle Dark mode" alt="Turn out the lights!">
             <i class="ri-moon-line"></i>
@@ -182,6 +185,7 @@
     <!-- Sticky header -->
     <script>
         changeThemeButton = document.getElementById('themeButton')
+        randomThemeButton = document.getElementById('randomThemeButton')
         toggleDarkModeButton = document.getElementById('toggleDarkModeButton')
         closeCardButton = document.getElementById('closeCard')
         toggleCardButton = document.getElementById('toggleCardButton')
@@ -194,7 +198,7 @@
 
             console.log('Theme Changed', theme)
             if (theme < 360) {
-                theme = theme + 3
+                theme = theme + 10
             }
             else {
                 theme = 0
@@ -213,13 +217,34 @@
             themeStyle.innerHTML = content
         }
 
+        const randomNumberGen = (upperLimit) => {
+            return Math.floor(Math.random() * (upperLimit+1))
+        }
 
+        const randomTheme = () => {
+
+            console.log('Theme Changed Randomly', theme)
+            
+            theme = randomNumberGen(360)
+
+            if (theme >= 180) {
+                content = ':root{\n'
+                    + ' --theme-hue-val: ' + theme + ';\n'
+                    + '--bg-calc: calc(var(--theme-hue-val) - 180);\n}'
+            }
+            else {
+                content = ':root{'
+                    + ' --theme-hue-val: ' + theme + ';\n'
+                    + '--bg-calc: calc(var(--theme-hue-val) + 180);\n}'
+            }
+
+            themeStyle.innerHTML = content
+        }
         const toggleDarkMode = () => {
+
             console.log('Dark Mode Toggled')
             document.body.classList.toggle('dark')
         }
-
-
         const closeCard = () => {
             closableCard = document.getElementById('closableCard')
 
@@ -230,6 +255,7 @@
         toggleCardButton.addEventListener('click', closeCard)
         closeCardButton.addEventListener('click', closeCard)
         changeThemeButton.addEventListener('click', changeTheme)
+        randomThemeButton.addEventListener('click', randomTheme)
         toggleDarkModeButton.addEventListener('click', toggleDarkMode)
     </script>
 </body>
